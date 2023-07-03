@@ -30,12 +30,6 @@ class probando_unittest(unittest.TestCase):
 
         except NoSuchElementException:
             print("Something went wrong")
-            
-    
-    #def tearDown(self):
-        #
-        # self.driver.close()
-
 
 if __name__ == "__main__":
     unittest.main()
