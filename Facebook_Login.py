@@ -30,6 +30,7 @@ class probando_unittest(unittest.TestCase):
 
         except NoSuchElementException:
             print("Something went wrong")
+            
     
     #def tearDown(self):
         #
