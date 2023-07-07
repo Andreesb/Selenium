@@ -9,12 +9,12 @@ import datetime
 
 current_datetime = datetime.datetime.now()
 
-log_file_path = r"C:\Users\Andresb\Desktop\FacebookTests\facebook_login_tests.log" #Test logs directory
+log_file_path = r"C:\YOUR\DESIRED\DIRECTORY\FacebookTests\facebook_login_tests.log" #Test logs directory
 
 def verify_login(username, password, test_name, log_file):
     driver = webdriver.Chrome()
 
-    try:    #To find the facebook login page, and the the log in functionality
+    try:    #To find the Facebook login page, and verify the login functionality
         driver.get("https://www.facebook.com/")
         time.sleep(2)
         user = driver.find_element(By.ID, "email")
@@ -24,7 +24,7 @@ def verify_login(username, password, test_name, log_file):
         password_input.submit()
         time.sleep(3)
 
-        try:    # to find the Messeger button to verify the login successful
+        try:    # to find the Messenger button to verify the login successful
             success = driver.find_elements(By.CSS_SELECTOR, ".x9f619.x1n2onr6.x1ja2u2z")
             if success:
                 result = f"Test '{test_name}': Login successful"
@@ -40,16 +40,16 @@ def verify_login(username, password, test_name, log_file):
 
 
 test_cases = [
-    {"username": "juantestt2023@gmail.com", "password": "JuantesT2023", "test_name": "Valid credentials"},
-    {"username": "invalid_username", "password": "JuantesT2023", "test_name": "Invalid username"},
-    {"username": "juantestt2023@gmail.com", "password": "invalid_password", "test_name": "Invalid password"},
+    {"username": "testtest@gmail.com", "password": "test2023", "test_name": "Valid credentials"},
+    {"username": "invalid_username", "password": "test2023", "test_name": "Invalid username"},
+    {"username": "testtest@gmail.com", "password": "invalid_password", "test_name": "Invalid password"},
     {"username": "", "password": "", "test_name": "Empty credentials"},
-    {"username": "JUANTESTT2023@GMAIL.COM", "password": "JuantesT2023", "test_name": "Uppercase username"},
-    {"username": "juantestt2023@gmail.com", "password": "JUANTEST2023", "test_name": "Uppercase password"}
+    {"username": "TESTTEST@GMAIL.COM", "password": "TEST2023", "test_name": "Uppercase username"},
+    {"username": "testtest@gmail.com", "password": "TEST2023", "test_name": "Uppercase password"}
 
 
 ]
-with open(log_file_path, "a") as log_file:  #Open a file and write the tests output with date and time
+with open(log_file_path, "a") as log_file:  #Open a file and write the output of the tests with date and time
     log_file.write(f"\n\n--- Tested at {current_datetime.strftime('%Y-%m-%d %H:%M:%S')} ---\n\n")
     for index, test_case in enumerate(test_cases, start=1):
         print(f"Test Case #{index}: {test_case['test_name']}")
