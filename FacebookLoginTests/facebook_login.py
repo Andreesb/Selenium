@@ -9,7 +9,7 @@ import datetime
 
 current_datetime = datetime.datetime.now()
 
-log_file_path = r"C:\YOUR\DESIRED\DIRECTORY\FacebookTests\facebook_login_tests.log" #Test logs directory
+log_file_path = r"C:\Users\Andresb\Desktop\FacebookTests\facebook_login_tests.log" #Test logs directory
 
 def verify_login(username, password, test_name, log_file):
     driver = webdriver.Chrome()
@@ -40,11 +40,11 @@ def verify_login(username, password, test_name, log_file):
 
 
 test_cases = [
-    {"username": "testtest@gmail.com", "password": "test2023", "test_name": "Valid credentials"},
+    {"username": "testtest@gmail.com", "password": "test2023**", "test_name": "Valid credentials"},
     {"username": "invalid_username", "password": "test2023", "test_name": "Invalid username"},
     {"username": "testtest@gmail.com", "password": "invalid_password", "test_name": "Invalid password"},
-    {"username": "", "password": "", "test_name": "Empty credentials"},
-    {"username": "TESTTEST@GMAIL.COM", "password": "TEST2023", "test_name": "Uppercase username"},
+    {"username": " ", "password": " ", "test_name": "Empty credentials"},
+    {"username": "TESTTEST@GMAIL.COM", "password": "test2023", "test_name": "Uppercase username"},
     {"username": "testtest@gmail.com", "password": "TEST2023", "test_name": "Uppercase password"}
 
 
