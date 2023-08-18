@@ -14,22 +14,21 @@ Selenium 3.141.0 or above - https://www.selenium.dev/documentation/
 Chrome driver - https://chromedriver.chromium.org/downloads
 
 
-## Overwiew
+## Overwiew 
 
-The purpose of these tests is to validate the Facebook platform's login process with different credentials. 
+The purpose of these tests is to validate the Facebook login function with different credentials and the recovery password functionality. 
 
-The tests are implemented using the Selenium WebDriver. The test cases are defined in a list, and each consists of a username, password, and test name.
+The tests are implemented using the Selenium WebDriver. 
 
-The script executes the following test cases: 
+Facebook_login.py executes the following test cases: 
+Test 'Valid credentials', test 'Invalid username', test 'Invalid password', test 'Empty credentials', test 'Uppercase username', and test 'Uppercase password'.
 
-Test 'Valid credentials'
-Test 'Invalid username'
-Test 'Invalid password'
-Test 'Empty credentials' 
-Test 'Uppercase username'
-Test 'Uppercase password'
+Password_recovery executes the following test cases:
+Test 'Valid email', test 'Invalid email', test 'No format', test 'Invalid format'.
+
 
 You can add more test cases if you need.
+
 
 The test results are logged in a file named facebook_login_tests.log, stored in the specified file path. The log file provides information about the test execution and the result of each test case.
 
@@ -38,7 +37,7 @@ The test results are logged in a file named facebook_login_tests.log, stored in 
 
 To get started with running the tests, follow these steps:
 
-1. Open the facebook_login.py file in a text editor.
+1. Open any of the tests in a text editor.
 
 2. In the log_file_path update the desired directory for the tests output.
 
@@ -46,9 +45,9 @@ To get started with running the tests, follow these steps:
 
 4. Save the changes.
 
-5. Open a terminal or command prompt and navigate to the directory where the facebook_login.py file is located.
+5. Open a terminal or command prompt and navigate to the directory where the file is located.
 
-6. Run the following command to execute the test case: python facebook_login.py
+6. Run the tests: python facebook_login.py
 
 
 ## License
